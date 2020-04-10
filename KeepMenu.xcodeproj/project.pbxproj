@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		DC25CEBB2440A8D800B89FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CEBA2440A8D800B89FB4 /* AppDelegate.swift */; };
-		DC25CEBD2440A8D800B89FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CEBC2440A8D800B89FB4 /* ViewController.swift */; };
 		DC25CEBF2440A8DE00B89FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC25CEBE2440A8DE00B89FB4 /* Assets.xcassets */; };
 		DC25CEC22440A8DE00B89FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC25CEC02440A8DE00B89FB4 /* Main.storyboard */; };
+		DC25CECB2440AA8500B89FB4 /* KeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */; };
+		DC25CECD2440AFDC00B89FB4 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */; };
+		DC25CED02440B76D00B89FB4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25CECF2440B76D00B89FB4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC25CEB72440A8D800B89FB4 /* KeepMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC25CEBA2440A8D800B89FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC25CEBC2440A8D800B89FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC25CEBE2440A8DE00B89FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC25CEC12440A8DE00B89FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC25CEC32440A8DE00B89FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC25CEC42440A8DE00B89FB4 /* KeepMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepMenu.entitlements; sourceTree = "<group>"; };
+		DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepViewController.swift; sourceTree = "<group>"; };
+		DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		DC25CECF2440B76D00B89FB4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC25CED02440B76D00B89FB4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,7 @@
 			children = (
 				DC25CEB92440A8D800B89FB4 /* KeepMenu */,
 				DC25CEB82440A8D800B89FB4 /* Products */,
+				DC25CECE2440B76D00B89FB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,13 +60,22 @@
 			isa = PBXGroup;
 			children = (
 				DC25CEBA2440A8D800B89FB4 /* AppDelegate.swift */,
-				DC25CEBC2440A8D800B89FB4 /* ViewController.swift */,
+				DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */,
+				DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */,
 				DC25CEBE2440A8DE00B89FB4 /* Assets.xcassets */,
 				DC25CEC02440A8DE00B89FB4 /* Main.storyboard */,
 				DC25CEC32440A8DE00B89FB4 /* Info.plist */,
 				DC25CEC42440A8DE00B89FB4 /* KeepMenu.entitlements */,
 			);
 			path = KeepMenu;
+			sourceTree = "<group>";
+		};
+		DC25CECE2440B76D00B89FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC25CECF2440B76D00B89FB4 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC25CEBD2440A8D800B89FB4 /* ViewController.swift in Sources */,
+				DC25CECD2440AFDC00B89FB4 /* EventMonitor.swift in Sources */,
+				DC25CECB2440AA8500B89FB4 /* KeepViewController.swift in Sources */,
 				DC25CEBB2440A8D800B89FB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +288,7 @@
 				CODE_SIGN_ENTITLEMENTS = KeepMenu/KeepMenu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepMenu/Info.plist;
@@ -292,6 +309,7 @@
 				CODE_SIGN_ENTITLEMENTS = KeepMenu/KeepMenu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepMenu/Info.plist;
