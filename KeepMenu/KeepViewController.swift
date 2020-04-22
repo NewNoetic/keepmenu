@@ -8,20 +8,36 @@
 
 import Cocoa
 import WebKit
+import WebKitUrlFix
 
 class KeepViewController: NSViewController {
 
+    weak var parentPopover: NSPopover?
     @IBOutlet weak var webView: WKWebView!
-    
+    var webKitFix: WebKitUrlFixer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         
+        webKitFix = WebKitUrlFixer(forwardDelegate: self)
+        
+        webView.navigationDelegate = webKitFix
+        webView.uiDelegate = webKitFix
+
         self.preferredContentSize = NSSize(width: 650, height: 700)
         
         let url = URL(string: "https://keep.google.com")
         let request = URLRequest(url: url!)
         webView.load(request)
+    }
+}
+
+extension KeepViewController: WKNavigationDelegate, WKUIDelegate {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        print("close popup on link click")
+        self.parentPopover?.close()
+        return nil
     }
 }
 
