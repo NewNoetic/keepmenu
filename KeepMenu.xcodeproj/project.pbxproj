@@ -11,9 +11,8 @@
 		DC25CEBF2440A8DE00B89FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC25CEBE2440A8DE00B89FB4 /* Assets.xcassets */; };
 		DC25CEC22440A8DE00B89FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC25CEC02440A8DE00B89FB4 /* Main.storyboard */; };
 		DC25CECB2440AA8500B89FB4 /* KeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */; };
-		DC25CECD2440AFDC00B89FB4 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */; };
 		DC25CED02440B76D00B89FB4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25CECF2440B76D00B89FB4 /* WebKit.framework */; };
-		DCD774F1244FD65A00AA9A04 /* WebKitUrlFix in Frameworks */ = {isa = PBXBuildFile; productRef = DCD774F0244FD65A00AA9A04 /* WebKitUrlFix */; };
+		DCF399A0247CE6BA001FB0FE /* menu-core in Frameworks */ = {isa = PBXBuildFile; productRef = DCF3999F247CE6BA001FB0FE /* menu-core */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +23,9 @@
 		DC25CEC32440A8DE00B89FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC25CEC42440A8DE00B89FB4 /* KeepMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepMenu.entitlements; sourceTree = "<group>"; };
 		DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepViewController.swift; sourceTree = "<group>"; };
-		DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		DC25CECF2440B76D00B89FB4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		DCF3999A247CC2FF001FB0FE /* menu-core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "menu-core"; path = "../menu-core"; sourceTree = "<group>"; };
+		DCF3999B247CE1CF001FB0FE /* KeepMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeepMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCD774F1244FD65A00AA9A04 /* WebKitUrlFix in Frameworks */,
+				DCF399A0247CE6BA001FB0FE /* menu-core in Frameworks */,
 				DC25CED02440B76D00B89FB4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +44,7 @@
 		DC25CEAE2440A8D800B89FB4 = {
 			isa = PBXGroup;
 			children = (
+				DCF3999A247CC2FF001FB0FE /* menu-core */,
 				DC25CEB92440A8D800B89FB4 /* KeepMenu */,
 				DC25CEB82440A8D800B89FB4 /* Products */,
 				DC25CECE2440B76D00B89FB4 /* Frameworks */,
@@ -63,11 +64,11 @@
 			children = (
 				DC25CEBA2440A8D800B89FB4 /* AppDelegate.swift */,
 				DC25CECA2440AA8500B89FB4 /* KeepViewController.swift */,
-				DC25CECC2440AFDC00B89FB4 /* EventMonitor.swift */,
 				DC25CEBE2440A8DE00B89FB4 /* Assets.xcassets */,
 				DC25CEC02440A8DE00B89FB4 /* Main.storyboard */,
 				DC25CEC32440A8DE00B89FB4 /* Info.plist */,
 				DC25CEC42440A8DE00B89FB4 /* KeepMenu.entitlements */,
+				DCF3999B247CE1CF001FB0FE /* KeepMenu-Bridging-Header.h */,
 			);
 			path = KeepMenu;
 			sourceTree = "<group>";
@@ -97,7 +98,7 @@
 			);
 			name = KeepMenu;
 			packageProductDependencies = (
-				DCD774F0244FD65A00AA9A04 /* WebKitUrlFix */,
+				DCF3999F247CE6BA001FB0FE /* menu-core */,
 			);
 			productName = KeepMenu;
 			productReference = DC25CEB72440A8D800B89FB4 /* KeepMenu.app */;
@@ -115,6 +116,7 @@
 				TargetAttributes = {
 					DC25CEB62440A8D800B89FB4 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -128,7 +130,7 @@
 			);
 			mainGroup = DC25CEAE2440A8D800B89FB4;
 			packageReferences = (
-				DCD774EF244FD65A00AA9A04 /* XCRemoteSwiftPackageReference "webkiturlfix" */,
+				DCA3BA7C247CC2080044CB6F /* XCRemoteSwiftPackageReference "menu-core" */,
 			);
 			productRefGroup = DC25CEB82440A8D800B89FB4 /* Products */;
 			projectDirPath = "";
@@ -156,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC25CECD2440AFDC00B89FB4 /* EventMonitor.swift in Sources */,
 				DC25CECB2440AA8500B89FB4 /* KeepViewController.swift in Sources */,
 				DC25CEBB2440A8D800B89FB4 /* AppDelegate.swift in Sources */,
 			);
@@ -293,10 +294,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeepMenu/KeepMenu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepMenu/Info.plist;
@@ -306,6 +308,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.KeepMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KeepMenu/KeepMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -314,10 +318,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeepMenu/KeepMenu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = KeepMenu/Info.plist;
@@ -327,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.KeepMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KeepMenu/KeepMenu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -355,9 +361,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DCD774EF244FD65A00AA9A04 /* XCRemoteSwiftPackageReference "webkiturlfix" */ = {
+		DCA3BA7C247CC2080044CB6F /* XCRemoteSwiftPackageReference "menu-core" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/newnoetic/webkiturlfix";
+			repositoryURL = "https://github.com/NewNoetic/menu-core";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -366,10 +372,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DCD774F0244FD65A00AA9A04 /* WebKitUrlFix */ = {
+		DCF3999F247CE6BA001FB0FE /* menu-core */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCD774EF244FD65A00AA9A04 /* XCRemoteSwiftPackageReference "webkiturlfix" */;
-			productName = WebKitUrlFix;
+			productName = "menu-core";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

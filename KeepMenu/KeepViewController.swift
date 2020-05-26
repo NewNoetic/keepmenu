@@ -8,7 +8,7 @@
 
 import Cocoa
 import WebKit
-import WebKitUrlFix
+import menu_core
 
 class KeepViewController: NSViewController {
 

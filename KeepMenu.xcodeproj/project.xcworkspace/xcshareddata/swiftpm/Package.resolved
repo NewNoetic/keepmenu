@@ -2,11 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "WebKitUrlFix",
-        "repositoryURL": "https://github.com/newnoetic/webkiturlfix",
+        "package": "menu-core",
+        "repositoryURL": "https://github.com/NewNoetic/menu-core",
         "state": {
           "branch": null,
-          "revision": "f2131537f609a5b7e271e504cdf041d6a554ec4e",
+          "revision": "fde07e942c5eb94668e116ef877df0aa41a89b3e",
           "version": "1.0.0"
         }
       }
